@@ -1,15 +1,61 @@
 # MoodBox
 Interaktiv nettbutikk med personlige bokser
 
-## 🎯 Om prosjektet
-**MoodBox** er en nettbutikk hvor brukeren kan handle produkter og få personlige anbefalinger.  
-Butikken tilbyr både vanlige varer og spesielle “bokser” – ferdigpakkede sett med produkter innenfor et tema, som for eksempel *self-care*, *snacks*, *kos* eller *trening*.  
+## 💡 Kort beskrivelse
+**MoodBox** er en nettbutikk hvor brukeren kan handle vanlige produkter og ferdigpakkede produktbokser innenfor ulike temaer som *self-care*, *snacks*, *trening* og *kos*.  
+Målet er å lage en moderne, brukervennlig nettbutikk med et personlig preg, der en enkel **chatbot** fungerer som en assistent som hjelper brukeren med å finne produkter og bokser.  
 
-I tillegg finnes det en liten interaktiv funksjon der brukeren kan svare på noen enkle spørsmål for å få forslag til hvilken boks som passer best.  
-En **chatbot** fungerer som butikkens assistent og hjelper brukeren underveis – den kan forklare hvordan butikken fungerer, vise produkter eller komme med anbefalinger.  
+En enkel prototype (MVP) vil først vise:
+- en hovedside med logo, meny og bannere,  
+- en produktside med testdata fra databasen,  
+- og et lite chatvindu som kommuniserer med Flask-backend.  
 
-Prosjektet er laget med **Flask, MariaDB, HTML/CSS og JavaScript**.  
-Alt kjører på en **Raspberry Pi**, og hele løsningen er dokumentert og tilgjengelig på GitHub.
+---
+
+## 🧠 Idé og mål
+Prosjektet skal vise hvordan jeg kan utvikle et fungerende IT-system som består av:
+- egenutviklet backend med Python (Flask)
+- database (MariaDB)
+- frontend med HTML, CSS og JavaScript
+- chatbot-integrasjon
+- dokumentasjon og brukerveiledning
+
+---
+
+## ⚙️ Teknologier og utstyr
+| Teknologi / verktøy | Bruksområde |
+|----------------------|-------------|
+| **Flask (Python)** | Webserver og backend-logikk |
+| **MariaDB** | Database for brukere, produkter og bokser |
+| **HTML / CSS / JavaScript** | Frontend-design og interaktivitet |
+| **Raspberry Pi** | Kjører hele løsningen som webserver |
+| **GitHub** | Versjonskontroll, planlegging og dokumentasjon |
+| **Figma** | Lage skisser og visuell plan for nettsiden |
+
+---
+
+## 💬 Hvordan prosjektet viser kompetanse
+
+### 🔹 Utvikling
+- Jeg programmerer alt selv i Python (Flask).  
+- Lager ruter, funksjoner og datastrukturer for å hente og vise produkter.  
+- Bruker loops, funksjoner og if-tester i koden.  
+- Kobler Flask til MariaDB for å hente og lagre data.
+
+### 🔹 Driftstøtte 
+- Setter opp og drifter webserveren på Raspberry Pi.  
+- Installerer og konfigurerer MariaDB og Flask-miljøet.  
+- Tester og sikrer at serveren kjører stabilt.  
+
+### 🔹 Brukerstøtte
+- Lager brukervennlig grensesnitt.  
+- Skriver enkel veiledning for hvordan brukeren navigerer og handler.  
+- Chatboten hjelper brukeren og fungerer som digital veileder.  
+
+---
+
+
+
 
 
 
