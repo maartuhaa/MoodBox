@@ -24,7 +24,7 @@ Prosjektet skal vise hvordan jeg kan utvikle et fungerende IT-system som består
 - **Git & GitHub**
 - **Linux (Raspberry Pi)**
 
----|
+---
 
 ## ⚙️ Funksjonalitet
 - Dynamisk innhold hentet fra database
