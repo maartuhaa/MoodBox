@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="section-title">Min konto</h2>
+
+<div class="account-box">
+    {% if bruker %}
+        <p><strong>Navn:</strong> {{ bruker.navn }}</p>
+        <p><strong>E-post:</strong> {{ bruker.epost }}</p>
+        <a href="/logout" class="btn-gray">Logg ut</a>
+    {% else %}
+        <p>Ingen brukerfunksjoner. <a href="/register">Registrer deg</a> eller <a href="/">logg inn</a>.</p>
+    {% endif %}
+</div>
+
+<h2 class="section-title">Mine bestillinger</h2>
+
+{% if orders %}
+<ul class="orders-list">
+    {% for o in orders %}
+    <li class="order-row">
+        <div class="order-left">
+            <strong>Ordre:</strong> {{ o.bestilling_id }}
+        </div>
+        <div class="order-mid">
+            <strong>Dato:</strong> {{ o.dato }}
+        </div>
+        <div class="order-right">
+            <strong>Antall varer:</strong> {{ o.total_items }}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p style="color:white;">Ingen bestillinger enda.</p>
+{% endif %}
+
+{% endblock %}

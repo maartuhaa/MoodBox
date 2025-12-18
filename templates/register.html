@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="section-title">Registrer deg</h2>
+
+<form method="POST" class="form-box">
+    <input type="text" name="navn" placeholder="Navn" required>
+    <input type="email" name="epost" placeholder="E-post" required>
+    <input type="password" name="passord" placeholder="Passord" required>
+
+    <button class="btn-red">Opprett konto</button>
+</form>
+
+{% if session.get("register_error") %}
+    <p class="error-msg">{{ session.get("register_error") }}</p>
+{% endif %}
+
+{% set _ = session.pop("register_error", None) %}
+{% endblock %}

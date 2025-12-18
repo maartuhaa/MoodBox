@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="box-wrapper">
+
+    <h2 class="sectionTitle">{{ box.box_name }}</h2>
+
+    <h3 class="product-title">Produkter i boksen</h3>
+
+    <ul class="product-list">
+        {% for p in products %}
+        <li class="product-item">{{ p.product_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="/add_to_cart" method="POST" class="buy-form">
+        <input type="hidden" name="box_id" value="{{ box.id }}">
+        <button class="buy-btn" type="submit">Kjøp nå</button>
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="section-title">Fullfør bestillingen</h2>
+
+<div class="checkout-box">
+
+    <h3>Dine produkter</h3>
+
+    <ul class="checkout-list">
+        {% for item in items %}
+        <li>
+            {{ item.box.box_name }} × {{ item.qty }}  
+            <span>{{ item.price }} kr</span>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="checkout-total">
+        Totalt: <strong>{{ total }} kr</strong>
+    </div>
+
+    <h3>Leveringsinformasjon</h3>
+
+    <form method="POST" action="/checkout/submit" class="checkout-form">
+        <input type="text" name="address" placeholder="Adresse" required>
+        <input type="text" name="phone" placeholder="Telefonnummer" required>
+        <textarea name="note" placeholder="Kommentar (valgfritt)"></textarea>
+
+        <button type="submit" class="checkout-btn">Fullfør kjøpet</button>
+    </form>
+
+</div>
+
+{% endblock %}

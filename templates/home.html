@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="home-container">
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Ditt humør,<br>din stil.<br>Din humøroboks.</h1>
+            <button class="handle-btn">Handle nå</button>
+        </div>
+        <div class="hero-img">
+            <img src="/static/img/redBox.png">
+        </div>
+    </div>
+
+    <h2 class="section-title">Populære kategorier</h2>
+
+ <div class="categories-row">
+
+    <a href="/category/1" class="category-card">
+        <img src="/static/img/anise-candy.png">
+        <p>Søtsakerboks</p>
+    </a>
+
+    <a href="/category/7" class="category-card">
+        <img src="/static/img/adventure-sports.png">
+        <p>Aktivboks</p>
+    </a>
+
+    <a href="/category/7" class="category-card">
+        <img src="/static/img/coffee-cup.png">
+        <p>Koseboks</p>
+    </a>
+
+    <a href="/category/7" class="category-card">
+        <img src="/static/img/heart.png">
+        <p>Selvpleieboks</p>
+    </a>
+
+  </div>
+
+
+   <h2 class="section-title">Populære produkter</h2>
+
+  <div class="product-row">
+
+    <div class="product-card">
+        <img src="/static/img/spa-candles.png">
+        <p>Aroma Candle</p>
+    </div>
+
+    <div class="product-card">
+        <img src="/static/img/cookie.png">
+        <p>Choco Crunch Cookies</p>
+    </div>
+
+    <div class="product-card">
+        <img src="/static/img/energy-bar.png">
+        <p>Energy Bar Pack (5 pcs)</p>
+    </div>
+
+    <div class="product-card">
+        <img src="/static/img/plush-toy.png">
+        <p>Mini Plush "MoodBear"</p>
+    </div>
+
+</div>
+
+
+     <footer>
+        © {{ 2025 }} MoodBox – alle rettigheter reservert
+    </footer>
+
+</div>
+
+{% endblock %}

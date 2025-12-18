@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="section-title">Populære kategorier</h2>
+
+<div class="categories-row">
+
+    <a href="/category/1" class="category-card">
+        <img src="/static/img/anise-candy.png">
+        <p>Søtsaker</p>
+    </a>
+
+    <a href="/category/2" class="category-card">
+        <img src="/static/img/coffee-cup.png">
+        <p>Drikke</p>
+    </a>
+
+    <a href="/category/3" class="category-card">
+        <img src="/static/img/leaf.png">
+        <p>Sunt kosthold</p>
+    </a>
+
+    <a href="/category/4" class="category-card">
+        <img src="/static/img/heart.png">
+        <p>Barn</p>
+    </a>
+
+</div>
+
+<h2 class="section-title" style="margin-top:35px;">Andre bokser</h2>
+
+ <!-- Lage sin egen box -->
+<div class="special-box-wrapper">
+    <a href="/category/7" class="special-box">
+        <h3>Lage sin egen box</h3>
+        <p>(kommer senere)</p>
+    </a>
+</div>
+
+
+<div class="other-grid">
+
+
+    <!-- Nye bokser -->
+    <a href="/category/7" class="other-card">
+        <h3>Nye bokser</h3>
+        <p>Selvpleieboks</p>
+        <p>Koseboks</p>
+        <p>Aktivboks</p>
+    </a>
+    
+    <!-- Humør & følelser -->
+    <a href="/category/6" class="other-card">
+        <h3>Humør & følelser</h3>
+        <p>Dårlig humør – god dag</p>
+        <p>Stressende dag</p>
+        <p>Feire små seire</p>
+        <p>Avslapning etter jobb</p>
+        <p>Søvn og restitusjon</p>
+    </a>
+
+    <!-- Barn -->
+    <a href="/category/4" class="other-card">
+        <h3>Barn</h3>
+        <p>Lekebokser</p>
+        <p>Søte gaver</p>
+        <p>Kreative sett</p>
+    </a>
+
+    <!-- Sunt kosthold -->
+    <a href="/category/3" class="other-card">
+        <h3>Sunt kosthold</h3>
+        <p>Granola og müsli</p>
+        <p>Supermat</p>
+        <p>Proteinkasser</p>
+    </a>
+
+    <!-- Drikke -->
+    <a href="/category/2" class="other-card">
+        <h3>Drikke</h3>
+        <p>Te-bokser</p>
+        <p>Kaffe-bokser</p>
+        <p>Juice og limonade</p>
+    </a>
+
+    <!-- Gavebokser -->
+    <a href="/category/5" class="other-card">
+        <h3>Gavebokser</h3>
+        <p>Høytidsbokser</p>
+        <p>Avslapningsbokser</p>
+        <p>Luksusbokser</p>
+    </a>
+
+    <!-- Søtsaker -->
+    <a href="/category/1" class="other-card">
+        <h3>Søtsaker</h3>
+        <p>Sjokoladebokser</p>
+        <p>Godteribokser</p>
+        <p>Kjeks og vafler</p>
+    </a>
+
+</div>
+
+{% endblock %}

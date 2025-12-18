@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood Box</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js" defer></script>
+</head>
+
+<body>
+
+<div class="page-container">
+
+<header>
+    <div class="logo">
+        <a href="/"><img src="/static/img/logo.png"><p>MOOD BOX</p></a>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/butikk">Butikk</a>
+        <a href="/kontakt">Kontakt</a>
+        <a href="/cart"><img src="/static/img/shopping-cart.png"></a>
+
+        {% if session.get("user_id") %}
+            <a href="/account"><img src="/static/img/account.png"></a>
+        {% else %}
+            <a href="#" onclick="openLogin()"><img src="/static/img/account.png"></a>
+        {% endif %}
+    </nav>
+</header>
+
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+</div>
+
+
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
+    
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+        <h2 class="modal-title">Logg inn</h2>
+
+        <form method="POST" action="/login" class="login-form">
+            
+            <div class="input-wrapper">
+                <input type="email" name="epost" placeholder="E-post" required>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="password" name="passord" placeholder="Passord" required>
+            </div>
+
+            {% if session.get("login_error") %}
+            <p class="error-msg">{{ session.get("login_error") }}</p>
+            {% endif %}
+
+            <button class="modal-btn" type="submit">Logg inn</button>
+        </form>
+
+        <p class="modal-register">
+            Har du ikke konto?
+            <a href="/register">Registrer deg</a>
+        </p>
+
+    </div>
+</div>
+
+
+
+
+<!--  Якщо була помилка — автоматично показати логін -->
+{% if session.get("login_error") %}
+<script>
+    openLogin();
+</script>
+{% endif %}
+
+</body>
+</html>

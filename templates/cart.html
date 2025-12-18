@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="section-title">Handlekurv</h2>
+
+<div class="cart-box">
+
+    {% if items %}
+    
+        <ul class="cart-list">
+
+            {% for item in items %}
+            <li>
+                <div class="cart-left">
+                    <h3>{{ item.box.box_name }}</h3>
+                    <p>Antall: {{ item.qty }}</p>
+                </div>
+
+                <div class="cart-right">
+                    <form method="POST" action="/remove_item">
+                        <input type="hidden" name="box_id" value="{{ item.box.id }}">
+                        <button class="remove-btn">Fjern</button>
+                    </form>
+                </div>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        <div class="cart-actions">
+            <a href="/checkout" class="checkout-btn">Fullfør bestilling</a>
+            <a href="/cart/clear" class="clear-btn">Tøm handlekurv</a>
+        </div>
+
+    {% else %}
+        <p class="empty-msg">Handlekurven er tom</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}
