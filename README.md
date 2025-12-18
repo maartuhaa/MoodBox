@@ -63,7 +63,7 @@ Slik bruker du MoodBox:
 3. Naviger på nettsiden
 4. Innhold lastes automatisk fra databasen
 
-## 🔐 Sikkerhet
+## Sikkerhet
 - Databasen kjører lokalt på serveren
 - Sensitive filer som .env er ikke lastet opp til GitHub
 - GitHub brukes kun til kode og dokumentasjon
